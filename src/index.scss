@@ -19,3 +19,55 @@ code {
   padding: 0;
   margin: 0;
 }
+.App {
+  min-height: 100vh;
+  padding: 0 24px;
+  margin: 0 auto;
+  background-color: #f1f5f8;
+  &__heading {  
+    position: relative;
+    width: fit-content;
+    padding-top: 60px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: rgb(30, 38, 55);
+    &::selection {
+      background-color: darksalmon;
+      color: white;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 30px;
+      right: 30px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: rgba(233, 150, 122, 0.75);
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    margin: 0 auto;
+    &-item {
+      display: block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-bottom: 80px;
+      text-decoration: none;
+      color: darksalmon;
+      font-size: 17px;
+      letter-spacing: 1px;
+      transition: all 200ms linear;
+      &:hover {
+        background-color: rgba(233, 150, 122, 0.756);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+}
